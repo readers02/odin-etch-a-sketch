@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+#drawArea {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 600px;
+    border: 5px solid red;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.drawSquare{
+    margin: 0;
+    padding: 0;
+}

@@ -6,7 +6,9 @@ function setDrawArea(size){
         const squareSize = 100/size
         square.style.height=squareSize + "%";
         square.style.width=squareSize + "%";
-        square.style.backgroundColor = ("#" + Math.floor(Math.random() * 0xFFFFFF).toString(16).padStart(6, '0'));
+        square.addEventListener("mouseover", () => {
+            square.style.backgroundColor = "#000000";
+        });
         drawArea.appendChild(square);
     }
 }

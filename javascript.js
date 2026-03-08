@@ -6,8 +6,17 @@ function setDrawArea(size){
         const squareSize = 100/size
         square.style.height=squareSize + "%";
         square.style.width=squareSize + "%";
-        square.addEventListener("mouseover", () => {
-            square.style.backgroundColor = "#000000";
+        square.dataset.opacity = 0;
+        square.addEventListener("mouseenter", () => {
+            let opacity = Number(square.dataset.opacity);
+
+            if (opacity < 10) {
+                opacity=opacity+2;
+                square.dataset.opacity = opacity;
+
+                const darkness = 100 - (opacity * 10);
+                square.style.backgroundColor = `hsl(0, 0%, ${darkness}%)`;
+            }
         });
         drawArea.appendChild(square);
     }
